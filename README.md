@@ -2,14 +2,14 @@
 A group project for CPSC 411A -- Android App Development
 
 ## Table of Contents
-- Developers
-- Project Description
-- Features
-- Installation
-- Usage
-- Preliminary Mockups
-  - Portrait
-  - Landscape
+- [Developers](#developers)
+- [Project Description](#project-description)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Preliminary Mockups](#preliminary-mockups)
+  - [Portrait](#portrait)
+  - [Landscape](#landscape)
 
 ## Developers
 | Name       |
@@ -31,7 +31,7 @@ Sound-Board is an Android application designed as a soundboard. The interface co
 
 ## Installation
 1. Clone the repository:
-   git clone https://github.com/TelloViz/Sound-Board.git
+   git clone https://github.com/lollisjosh/Sound-Board.git
 2. Open the project in Android Studio.
 3. Build and run the application on an Android device or emulator.
 
