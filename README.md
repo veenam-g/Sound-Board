@@ -15,6 +15,10 @@ A group project for CPSC 411A -- Android App Development
 | Name       |
 |------------|
 | Josh Lollis |
+|             |
+|             |
+|             |
+|             |
 
 ## Project Description
 Sound-Board is an Android application designed as a soundboard. The interface consists of five buttons, each paired with a combo box that allows users to select from a list of predetermined sounds. Users can assign sounds to the buttons and save these configurations as soundbanks, which can be selected from a dropdown menu.
