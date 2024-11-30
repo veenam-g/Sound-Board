@@ -5,6 +5,7 @@ A group project for CPSC 411A -- Android App Development
 - [Developers](#developers)
 - [Project Description](#project-description)
 - [Features](#features)
+- [API](#api)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Preliminary Mockups](#preliminary-mockups)
@@ -28,6 +29,9 @@ Sound-Board is an Android application designed as a soundboard. The interface co
 - 5 combo boxes for selecting and assigning sounds to buttons
 - Dropdown menu for selecting stored soundbanks
 - User-friendly interface with portrait and landscape modes
+
+## API
+We are using the [Freesound API](https://freesound.org/docs/api/) for this project. With the Freesound API, you can browse, search, and retrieve information about Freesound users, packs, and the sounds themselves. You can find similar sounds to a given target (based on content analysis) and retrieve automatically extracted features from audio files, as well as perform advanced queries combining content analysis features and other metadata (tags, etc.). With the Freesound API, you can also upload, comment, rate, and bookmark sounds!
 
 ## Installation
 1. Clone the repository:
