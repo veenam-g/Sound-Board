@@ -12,4 +12,38 @@
         android:layout_marginTop="80dp"
         android:text="Sound Board"
         android:textSize="40sp" />
+    <Button
+        android:id="@+id/Sound1_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:text="Sound 1" />
+
+    <Button
+        android:id="@+id/Sound2_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:text="Sound 2" />
+
+    <Button
+        android:id="@+id/Sound3_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:text="Sound 3" />
+
+    <Button
+        android:id="@+id/Sound4_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:text="Sound 4" />
+
+    <Button
+        android:id="@+id/Sound5_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:text="Sound 5" />
 </LinearLayout>
