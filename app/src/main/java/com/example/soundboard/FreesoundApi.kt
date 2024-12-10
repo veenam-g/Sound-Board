@@ -1,4 +1,5 @@
 package com.example.soundboard
 
-class FreesoundApi {
+interface FreesoundApi {
+
 }
