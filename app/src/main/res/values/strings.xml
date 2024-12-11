@@ -1,3 +1,33 @@
 <resources>
-    <string name="app_name">Sound Board</string>
+    <string name="app_name">SoundBoardApp</string>
+    <string name="sound_board">Sound Board</string>
+    <string name="sound_1">Sound 1</string>
+    <string name="sound_2">Sound 2</string>
+    <string name="sound_3">Sound 3</string>
+    <string name="sound_4">Sound 4</string>
+    <string name="sound_5">Sound 5</string>
+    <string name="new_soundbank">New Soundbank</string>
+    <string name="soundbank_list">Soundbank List</string>
+    <string name="save_soundbank">Save Soundbank</string>"
+    <string name="enter_soundbank_name">Enter Soundbank Name</string>
+    <string name="soundbank_name">Soundbank Name</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="delete_soundbank">Delete Soundbank</string>
+    <string name="are_you_sure">Are you sure you want to delete this soundbank?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string-array name="sound_banks_placeholder">
+        <item>Sound Bank 1</item>
+        <item>Sound Bank 2</item>
+        <item>Sound Bank 3</item>
+        <item>Sound Bank 4</item>
+        <item>Sound Bank 5</item>
+    </string-array>
+    <string-array name="sounds_placeholder">
+        <item>Sound Placeholder 1</item>
+        <item>Sound Placeholder 2</item>
+        <item>Sound Placeholder 3</item>
+    </string-array>
 </resources>
