@@ -49,11 +49,9 @@ class SoundbankListFragment : Fragment() {
                     soundBankSpinner.setSelection(soundbankNames.indexOf(lastSoundbankName))
                     val soundbank = soundbanks.firstOrNull { it.name == lastSoundbankName }
                     soundbank?.let {
-                        viewModel.updateSelectedSound(0, it.sound1)
-                        viewModel.updateSelectedSound(1, it.sound2)
-                        viewModel.updateSelectedSound(2, it.sound3)
-                        viewModel.updateSelectedSound(3, it.sound4)
-                        viewModel.updateSelectedSound(4, it.sound5)
+                        // Load the sounds of the selected soundbank
+                        (activity as? MainActivity)?.soundControlsFragment?.loadSoundBank(it)
+
                         Log.d("SoundbankList", "Loaded last selected soundbank: ${it.name}")
                     }
                 }
@@ -67,11 +65,9 @@ class SoundbankListFragment : Fragment() {
                 lifecycleScope.launch {
                     val selectedSoundbank = soundbankRepository.allSoundbanks.first().firstOrNull { it.name == selectedSoundbankName }
                     selectedSoundbank?.let {
-                        viewModel.updateSelectedSound(0, it.sound1)
-                        viewModel.updateSelectedSound(1, it.sound2)
-                        viewModel.updateSelectedSound(2, it.sound3)
-                        viewModel.updateSelectedSound(3, it.sound4)
-                        viewModel.updateSelectedSound(4, it.sound5)
+                        // Load the sounds of the selected soundbank
+                        (activity as? MainActivity)?.soundControlsFragment?.loadSoundBank(it)
+
                         Log.d("SoundbankList", "Loaded soundbank: ${it.name}")
 
                         // Save last selected soundbank to DataStore
