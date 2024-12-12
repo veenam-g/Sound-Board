@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sound_names">
+        <item>Chó sủa</item>
+        <item>Mèo kêu</item>
+        <item>Bò rống</item>
+        <item>Voi kêu</item>
+        <item>Sư tử gầm</item>
+        <item>Chuông điện thoại</item>
+        <item>Chuông cửa</item>
+        <item>Đồng hồ báo thức</item>
+        <item>Tiếng còi báo động</item>
+        <item>Tiếng chim hót</item>
+        <item>Mưa</item>
+        <item>Sấm sét</item>
+        <item>Gió</item>
+        <item>Sóng biển</item>
+        <item>Tiếng lửa cháy</item>
+    </string-array>
+</resources>

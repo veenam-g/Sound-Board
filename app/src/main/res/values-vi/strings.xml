@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ứng Dụng Bảng Âm Thanh</string>
+    <string name="sound_board">Bảng Âm Thanh</string>
+    <string name="sound_1">Âm Thanh 1</string>
+    <string name="sound_2">Âm Thanh 2</string>
+    <string name="sound_3">Âm Thanh 3</string>
+    <string name="sound_4">Âm Thanh 4</string>
+    <string name="sound_5">Âm Thanh 5</string>
+    <string name="new_soundbank">Ngân Hàng Âm Thanh Mới</string>
+    <string name="soundbank_list">Danh Sách Ngân Hàng Âm Thanh</string>
+    <string name="save_soundbank">Lưu Ngân Hàng Âm Thanh</string>
+    <string name="enter_soundbank_name">Nhập Tên Ngân Hàng Âm Thanh</string>
+    <string name="soundbank_name">Tên Ngân Hàng Âm Thanh</string>
+    <string name="cancel">Hủy</string>
+    <string name="save">Lưu</string>
+    <string name="delete_soundbank">Xóa Ngân Hàng Âm Thanh</string>
+    <string name="are_you_sure">Bạn có chắc chắn muốn xóa ngân hàng âm thanh này không?</string>
+    <string name="yes">Có</string>
+    <string name="no">Không</string>
+    <string name="import_button">Nhập khẩu</string>
+    <string name="export_button">Xuất khẩu</string>
+
+
+    <string-array name="sound_banks_placeholder">
+        <item>Ngân Hàng Âm Thanh 1</item>
+        <item>Ngân Hàng Âm Thanh 2</item>
+        <item>Ngân Hàng Âm Thanh 3</item>
+        <item>Ngân Hàng Âm Thanh 4</item>
+        <item>Ngân Hàng Âm Thanh 5</item>
+    </string-array>
+    <string-array name="sounds_placeholder">
+        <item>Âm Thanh Chưa Có 1</item>
+        <item>Âm Thanh Chưa Có 2</item>
+        <item>Âm Thanh Chưa Có 3</item>
+    </string-array>
+</resources>
