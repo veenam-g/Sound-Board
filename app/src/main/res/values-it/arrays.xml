@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sound_names">
+        <item>Abbaiare del cane</item>
+        <item>Miagolio del gatto</item>
+        <item>Muggito della mucca</item>
+        <item>Barrito dell\'elefante</item>
+        <item>Ruggito del leone</item>
+        <item>Squillo del telefono</item>
+        <item>Campanello</item>
+        <item>Sveglia</item>
+        <item>Sirena</item>
+        <item>Cinguettio degli uccelli</item>
+        <item>Pioggia</item>
+        <item>Tuono</item>
+        <item>Vento</item>
+        <item>Onde</item>
+        <item>Crepitio del fuoco</item>
+    </string-array>
+</resources>
