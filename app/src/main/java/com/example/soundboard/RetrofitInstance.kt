@@ -8,10 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitInstance {
     private const val BASE_URL = "https://freesound.org/apiv2/"
-    private const val TAG_DEBUG = "RetrofitInstanceDebug"
-    private const val TAG_INFO = "RetrofitInstanceInfo"
-    private const val TAG_WARN = "RetrofitInstanceWarn"
-    private const val TAG_ERROR = "RetrofitInstanceError"
+    private const val TAG = "RetrofitInstance"
 
     private val loggingInterceptor = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY
@@ -22,20 +19,14 @@ object RetrofitInstance {
         .build()
 
     val api: FreesoundApi by lazy {
-        Log.d(TAG_DEBUG, "Creating Retrofit instance")
-        try {
-            val retrofit = Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .client(httpClient)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build()
-            Log.i(TAG_INFO, "Retrofit instance created successfully")
-            retrofit.create(FreesoundApi::class.java).also {
-                Log.d(TAG_DEBUG, "FreesoundApi created")
+        Log.d(TAG, "Creating Retrofit instance")
+        Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .client(httpClient)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(FreesoundApi::class.java).also {
+                Log.d(TAG, "Retrofit instance created")
             }
-        } catch (e: Exception) {
-            Log.e(TAG_ERROR, "Error creating Retrofit instance: ${e.message}", e)
-            throw e
-        }
     }
 }

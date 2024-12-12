@@ -1,4 +1,3 @@
-// File: app/src/main/java/com/example/soundboard/Sound.kt
 package com.example.soundboard
 
 data class Sound(

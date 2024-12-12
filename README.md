@@ -18,7 +18,7 @@ A group project for CPSC 411A -- Android App Development
 | Josh Lollis     |
 | Hunter Tran     |
 | Guillermo Roman |
-|                 |
+| Veena M. G.     |
 |                 |
 
 ## Project Description
