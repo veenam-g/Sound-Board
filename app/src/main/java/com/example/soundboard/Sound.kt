@@ -8,14 +8,21 @@ data class Sound(
     val name: String,
     val previews: Map<String, String>
 ) {
+    companion object {
+        private const val TAG_DEBUG = "SoundDebug"
+        private const val TAG_INFO = "SoundInfo"
+        private const val TAG_WARN = "SoundWarn"
+        private const val TAG_ERROR = "SoundError"
+    }
+
     init {
-        Log.d("Sound", "Created a sound object with ID: $id")
-        Log.i("Sound", "ID: $id, URL: $url, Name: $name, Previews: $previews")
+        Log.d(TAG_DEBUG, "Created a sound object with ID: $id")
+        Log.i(TAG_INFO, "ID: $id, URL: $url, Name: $name, Previews: $previews")
 
         if (url.isBlank()) {
-            Log.e("Sound", "URL is missing or empty for sound with ID: $id")
+            Log.e(TAG_ERROR, "URL is missing or empty for sound with ID: $id")
         } else {
-            Log.w("Sound", "Make sure the URL $url is accessible for sound with ID: $id")
+            Log.w(TAG_WARN, "Make sure the URL $url is accessible for sound with ID: $id")
         }
     }
 }
