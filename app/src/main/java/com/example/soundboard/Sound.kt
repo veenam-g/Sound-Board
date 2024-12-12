@@ -3,16 +3,17 @@ package com.example.soundboard
 import android.util.Log
 
 data class Sound(
-    val id: Int,
-    val url: String,
-    val name: String,
-    val previews: Map<String, String>
+    val id: Int, // The sound ID
+    val url: String, // The URI of the sound
+    val name: String, // The name user gave to the sound.
+    val previews: Map<String, String>, // Dictionary containing the URIs for mp3 and ogg previews
+    val images: Map<String, String> // Map of spectrogram waveform images
 ) {
     companion object {
-        private const val TAG_DEBUG = "SoundDebug"
-        private const val TAG_INFO = "SoundInfo"
-        private const val TAG_WARN = "SoundWarn"
-        private const val TAG_ERROR = "SoundError"
+        private const val TAG_DEBUG = "SoundDebug" // Tag for debug logs
+        private const val TAG_INFO = "SoundInfo" // Tag for info logs
+        private const val TAG_WARN = "SoundWarn" // Tag for warning logs
+        private const val TAG_ERROR = "SoundError" // Tag for error logs
     }
 
     init {
