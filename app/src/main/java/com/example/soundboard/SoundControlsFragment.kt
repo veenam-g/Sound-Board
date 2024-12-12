@@ -63,11 +63,7 @@ class SoundControlsFragment : Fragment() {
             view.findViewById<Spinner>(R.id.soundSpinner5)
         )
 
-        val soundNames = arrayOf(
-            "Dog Bark", "Cat Meow", "Cow Moo", "Elephant Trumpet", "Lion Growl",
-            "Phone Ring", "Doorbell", "Alarm Clock", "Siren", "Rain",
-            "Thunder", "Wind", "Waves", "Fire Crackling", "Car Horn"
-        )
+        val soundNames = resources.getStringArray(R.array.sound_names)
 
         soundAdapter =
             ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, soundNames).also { adapter ->
