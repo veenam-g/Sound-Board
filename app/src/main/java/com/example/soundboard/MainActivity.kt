@@ -12,12 +12,25 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.flow.first
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
+import com.google.gson.reflect.TypeToken
+import java.io.File
+import java.io.FileOutputStream
+import java.io.FileInputStream
+import java.io.IOException
+import android.widget.Toast
+import java.io.InputStreamReader
+import java.io.OutputStreamWriter
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import java.io.BufferedReader
+import java.io.BufferedWriter
 
 class MainActivity : AppCompatActivity() {
 
     val soundControlsFragment = SoundControlsFragment()
     private val soundbankListFragment = SoundbankListFragment()
-    private val viewModel: SoundViewModel by viewModels()
     private lateinit var settingsRepository: SettingsRepository
     private lateinit var soundbankRepository: SoundbankRepository
 
@@ -43,10 +56,18 @@ class MainActivity : AppCompatActivity() {
         replaceFragment(R.id.soundControlsFragment, soundControlsFragment)
         replaceFragment(R.id.soundbankListFragment, soundbankListFragment)
 
-        // Add Save Button
+        // Add Save Button, Export and Import buttons
         val saveButton = findViewById<Button>(R.id.saveSoundbankButton)
         saveButton.setOnClickListener {
             showSaveSoundbankDialog()
+        }
+        val exportButton = findViewById<Button>(R.id.exportButton)
+        exportButton.setOnClickListener {
+            exportSoundbanks()
+        }
+        val importButton = findViewById<Button>(R.id.importButton)
+        importButton.setOnClickListener {
+            importSoundbanks()
         }
 
         // Check if the database is empty and add initial soundbanks if it is
@@ -101,7 +122,7 @@ class MainActivity : AppCompatActivity() {
 
     private suspend fun addInitialSoundbanks() {
         val initialSoundbanks = listOf(
-            Soundbank("Sound Bank 1", "110011,418107,700380,527845,467762"),
+            Soundbank("Sound Bank 1", "418107,110011,700380,527845,467762"),
             Soundbank("Sound Bank 2", "24929,275072,219244,52906,243629"),
             Soundbank("Sound Bank 3", "446753,34338,14777,649208,182472")
         )
@@ -112,4 +133,68 @@ class MainActivity : AppCompatActivity() {
 
         Log.d("MainActivity", "Added initial soundbanks")
     }
+
+    private fun exportSoundbanks() {
+        lifecycleScope.launch(Dispatchers.IO) {
+            try {
+                val file = File(getExternalFilesDir(null), "soundbanks.json")
+                val fileOutputStream = FileOutputStream(file)
+                val bufferedWriter = BufferedWriter(OutputStreamWriter(fileOutputStream))
+
+                val soundbanks = soundbankRepository.allSoundbanks.first()
+                val gson = GsonBuilder().setPrettyPrinting().create()
+                val jsonString = gson.toJson(soundbanks)
+
+                bufferedWriter.write(jsonString)
+                bufferedWriter.close()
+
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@MainActivity, "Soundbanks exported to ${file.absolutePath}", Toast.LENGTH_LONG).show()
+                }
+            } catch (e: IOException) {
+                Log.e("MainActivity", "Error exporting soundbanks", e)
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@MainActivity, "Error exporting soundbanks: ${e.localizedMessage}", Toast.LENGTH_LONG).show()
+                }
+            }
+        }
+    }
+
+    private fun importSoundbanks() {
+        val file = File(getExternalFilesDir(null), "soundbanks.json")
+
+        if (!file.exists()) {
+            Toast.makeText(this, "No exported soundbanks found", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        lifecycleScope.launch(Dispatchers.IO) {
+            try {
+                val fileInputStream = FileInputStream(file)
+                val bufferedReader = BufferedReader(InputStreamReader(fileInputStream))
+                val jsonString = bufferedReader.readText()
+                bufferedReader.close()
+
+                val gson = Gson()
+                val type = object : TypeToken<List<Soundbank>>() {}.type
+                val importedSoundbanks = gson.fromJson<List<Soundbank>>(jsonString, type)
+
+                // Insert imported soundbanks into the database
+                importedSoundbanks.forEach { soundbank ->
+                    soundbankRepository.insert(soundbank)
+                }
+
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@MainActivity, "Soundbanks imported successfully", Toast.LENGTH_SHORT).show()
+                }
+
+            } catch (e: IOException) {
+                Log.e("MainActivity", "Error importing soundbanks", e)
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@MainActivity, "Error importing soundbanks: ${e.localizedMessage}", Toast.LENGTH_LONG).show()
+                }
+            }
+        }
+    }
+
 }
