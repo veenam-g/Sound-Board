@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sound_names">
+        <item>Ladrido de Perro</item>
+        <item>Maullido de Gato</item>
+        <item>Mugido de Vaca</item>
+        <item>Trompeta de Elefante</item>
+        <item>Rugido de León</item>
+        <item>Timbre de Teléfono</item>
+        <item>Timbre</item>
+        <item>Reloj Despertador</item>
+        <item>Sirena</item>
+        <item>Canto de Pájaros</item>
+        <item>Lluvia</item>
+        <item>Trueno</item>
+        <item>Viento</item>
+        <item>Olas</item>
+        <item>Chasquido de Fuego</item>
+    </string-array>
+</resources>
