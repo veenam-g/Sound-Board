@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AplicaciónTableroDeSonido</string>
+    <string name="sound_board">Tablero de Sonido</string>
+    <string name="sound_1">Sonido 1</string>
+    <string name="sound_2">Sonido 2</string>
+    <string name="sound_3">Sonido 3</string>
+    <string name="sound_4">Sonido 4</string>
+    <string name="sound_5">Sonido 5</string>
+    <string name="new_soundbank">Nuevo Banco de Sonido</string>
+    <string name="soundbank_list">Lista de Bancos de Sonido</string>
+    <string name="save_soundbank">Guardar Banco de Sonido</string>
+    <string name="enter_soundbank_name">Ingrese el Nombre del Banco de Sonido</string>
+    <string name="soundbank_name">Nombre del Banco de Sonido</string>
+    <string name="cancel">Cancelar</string>
+    <string name="save">Guardar</string>
+    <string name="delete_soundbank">Eliminar Banco de Sonido</string>
+    <string name="are_you_sure">¿Está seguro de que desea eliminar este banco de sonido?</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+    <string name="import_button">Importar</string>
+    <string name="export_button">Exportar</string>
+
+
+    <string-array name="sound_banks_placeholder">
+        <item>Banco de Sonido 1</item>
+        <item>Banco de Sonido 2</item>
+        <item>Banco de Sonido 3</item>
+        <item>Banco de Sonido 4</item>
+        <item>Banco de Sonido 5</item>
+    </string-array>
+    <string-array name="sounds_placeholder">
+        <item>Marcador de Sonido 1</item>
+        <item>Marcador de Sonido 2</item>
+        <item>Marcador de Sonido 3</item>
+    </string-array>
+</resources>

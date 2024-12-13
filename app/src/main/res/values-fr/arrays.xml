@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sound_names">
+        <item>Aboiement de chien</item>
+        <item>Miaulement de chat</item>
+        <item>Meuglement de vache</item>
+        <item>Barrissement d\'éléphant</item>
+        <item>Rugissement de lion</item>
+        <item>Sonnerie de téléphone</item>
+        <item>Sonnerie de porte</item>
+        <item>Réveil</item>
+        <item>Sirène</item>
+        <item>Piaillement des oiseaux</item>
+        <item>Pluie</item>
+        <item>Tonnerre</item>
+        <item>Vent</item>
+        <item>Vagues</item>
+        <item>Crépitement du feu</item>
+    </string-array>
+</resources>

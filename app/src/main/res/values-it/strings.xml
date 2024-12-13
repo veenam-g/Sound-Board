@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SoundBoardApp</string>
+    <string name="sound_board">Tavola dei Suoni</string>
+    <string name="sound_1">Suono 1</string>
+    <string name="sound_2">Suono 2</string>
+    <string name="sound_3">Suono 3</string>
+    <string name="sound_4">Suono 4</string>
+    <string name="sound_5">Suono 5</string>
+    <string name="new_soundbank">Nuova Banca del Suono</string>
+    <string name="soundbank_list">Elenco Banche del Suono</string>
+    <string name="save_soundbank">Salva Banca del Suono</string>
+    <string name="enter_soundbank_name">Inserisci il nome della Banca del Suono</string>
+    <string name="soundbank_name">Nome della Banca del Suono</string>
+    <string name="cancel">Annulla</string>
+    <string name="save">Salva</string>
+    <string name="delete_soundbank">Elimina Banca del Suono</string>
+    <string name="are_you_sure">Sei sicuro di voler eliminare questa banca del suono?</string>
+    <string name="yes">Sì</string>
+    <string name="no">No</string>
+    <string name="import_button">Importa</string>
+    <string name="export_button">Esporta</string>
+
+
+    <string-array name="sound_banks_placeholder">
+        <item>Banca del Suono 1</item>
+        <item>Banca del Suono 2</item>
+        <item>Banca del Suono 3</item>
+        <item>Banca del Suono 4</item>
+        <item>Banca del Suono 5</item>
+    </string-array>
+    <string-array name="sounds_placeholder">
+        <item>Segnaposto Suono 1</item>
+        <item>Segnaposto Suono 2</item>
+        <item>Segnaposto Suono 3</item>
+    </string-array>
+</resources>
