@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sound_names">
+        <item>Dog Bark</item>
+        <item>Cat Meow</item>
+        <item>Cow Moo</item>
+        <item>Elephant Trumpet</item>
+        <item>Lion Roar</item>
+        <item>Phone Ring</item>
+        <item>Doorbell</item>
+        <item>Alarm Clock</item>
+        <item>Siren</item>
+        <item>Birds Chirping</item>
+        <item>Rain</item>
+        <item>Thunder</item>
+        <item>Wind</item>
+        <item>Waves</item>
+        <item>Fire Crackling</item>
+    </string-array>
+</resources>
